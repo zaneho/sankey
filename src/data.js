@@ -1,159 +1,172 @@
-const data={
+const data = {
     nodes: [
-      {
-        id: "a1",
-        color: "rgba(255, 0, 0, 0.3)",
-        leftIcon: "◔",
-        rightIcon: "",
-        labelTextColor: "rgb(255, 255, 255,0.3)",
-        height: 50
-      },
-      {
-        id: "b1",
-        color: "rgba(255, 0, 0, 0.8)",
-        leftIcon: "◔",
-        rightIcon: "",
-        height: 50
-      },
-      {
-        id: "a2",
-        color: "lightcoral",
-        leftIcon: "◕",
-        rightIcon: "",
-        height: 50
-      },
-      {
-        id: "b2",
-        color: "grey",
-        leftIcon: "",
-        rightIcon: ""
-      },
-      {
-        id: "a3",
-        color: "rgba(255, 0, 0, 0.3)",
-        leftIcon: "",
-        rightIcon: "",
-        labelTextColor: "rgb(255, 255, 255,0.3)"
-      },
-      {
-        id: "b3",
-        color: "red",
-        leftIcon: "",
-        rightIcon: ""
-      },
-      {
-        id: "b4",
-        color: "lightcoral",
-        leftIcon: "",
-        rightIcon: ""
-      },
-      {
-        id: "c1 long long text",
-        color: "blue",
-        leftIcon: "",
-        rightIcon: "⧖"
-      },
-      {
-        id: "c2",
-        color: "grey",
-        leftIcon: "",
-        rightIcon: ""
-      },
-      {
-        id: "c3 long long long long long long text",
-        color: "grey",
-        leftIcon: "◔",
-        rightIcon: "⧗"
-      },
-      {
-        id: "d1",
-        color: "navy",
-        leftIcon: "○",
-        rightIcon: ""
-      },
-      {
-        id: "d2",
-        color: "lightblue",
-        leftIcon: "⬤",
-        rightIcon: ""
-      },
-      {
-        id: "c4",
-        color: "blue",
-        leftIcon: "◐",
-        rightIcon: ""
-      }
+        {
+            id: "a1",
+            color: "rgba(255, 0, 0, 0.8)",
+            leftIcon: "◔",
+            rightIcon: "",
+            labelTextColor: "rgb(255, 255, 255,0.3)",
+            height: 50,
+            depth: 0,
+        },
+        {
+            id: "b1",
+            color: "rgba(255, 0, 0, 0.8)",
+            leftIcon: "◔",
+            rightIcon: "",
+            height: 50,
+            depth: 1,
+        },
+        {
+            id: "a2",
+            color: "rgba(150, 0, 0, 0.8)",
+            leftIcon: "◕",
+            rightIcon: "",
+            height: 50,
+            depth: 0,
+        },
+        {
+            id: "b2",
+            color: "rgba(138, 138, 138,0.8)",
+            leftIcon: "",
+            rightIcon: "",
+            depth: 1,
+        },
+        {
+            id: "a3",
+            color: "rgba(255, 0, 0, 0.8)",
+            leftIcon: "",
+            rightIcon: "",
+            labelTextColor: "rgb(255, 255, 255,0.3)",
+            depth: 0,
+        },
+        {
+            id: "b3",
+            color: "rgba(255, 0, 0, 0.8)",
+            leftIcon: "",
+            rightIcon: "",
+            depth: 1,
+        },
+        {
+            id: "b4",
+            color: "rgba(150, 0, 0, 0.8)",
+            leftIcon: "",
+            rightIcon: "",
+            depth: 1,
+        },
+        {
+            id: "c1 long long text",
+            color: "rgba(10, 0, 163,0.8)",
+            leftIcon: "",
+            rightIcon: "⧖",
+            depth: 2,
+        },
+        {
+            id: "c2",
+            color: "rgba(138, 138, 138,0.8)",
+            leftIcon: "",
+            rightIcon: "",
+            depth: 2,
+        },
+        {
+            id: "c3 long long long long long long text",
+            color: "rgba(138, 138, 138,0.8)",
+            leftIcon: "◔",
+            rightIcon: "⧗",
+            depth: 2,
+        },
+        {
+            id: "d1",
+            color: "rgba(20, 0, 200,0.8)",
+            leftIcon: "○",
+            rightIcon: "",
+            depth: 3,
+        },
+        {
+            id: "d2",
+            color: "rgba(74, 134, 255,0.8)",
+            leftIcon: "⬤",
+            rightIcon: "",
+            depth: 3,
+        },
+        {
+            id: "c4",
+            color: "rgba(74, 134, 255,0.8)",
+            leftIcon: "◐",
+            rightIcon: "",
+            depth: 2,
+        },
     ],
     links: [
-      {
-        source: "a1",
-        target: "b1",
-        value: 1
-      },
-      {
-        source: "a2",
-        target: "b2",
-        value: 1
-      },
-      {
-        source: "a3",
-        target: "b2",
-        value: 1
-      },
-      // {
-      //   source: "a3",
-      //   target: "b3",
-      //   value: 1
-      // },
-      {
-        source: "b1",
-        target: "c1 long long text",
-        value: 1
-      },
-      {
-        source: "b1",
-        target: "c3 long long long long long long text",
-        value: 1
-      },
-      {
-        source: "b2",
-        target: "c3 long long long long long long text",
-        value: 1
-      },
-      {
-        source: "c3 long long long long long long text",
-        target: "d1",
-        value: 1
-      },
-      {
-        source: "c1 long long text",
-        target: "d2",
-        value: 1
-      },
-      {
-        source: "c4",
-        target: "d1",
-        value: 1
-      },
-      {
-        source: "b4",
-        target: "c1 long long text",
-        value: 1
-      },
-      {
-        source: "c2",
-        target: "d2",
-        value: 1,
-        startColor: "rgba(0, 0, 0, 0.5)",
-        endColor: "rgba(0, 0, 0, 0.5)"
-      },
-      {
-        source: "a1",
-        target: "b3",
-        value: 1,
-        startColor: "rgba(0, 0, 0, 0)",
-        endColor: "rgba(0, 0, 0,0)"
-      }
-    ]
-  };
-export default data  
+        {
+            source: "a1",
+            target: "b1",
+            value: 1,
+        },
+        {
+            source: "a2",
+            target: "b2",
+            value: 1,
+        },
+        {
+            source: "a3",
+            target: "b2",
+            value: 1,
+        },
+        // {
+        //   source: "a3",
+        //   target: "b3",
+        //   value: 1
+        // },
+        {
+            source: "b1",
+            target: "c1 long long text",
+            value: 1,
+        },
+        {
+            source: "b1",
+            target: "c3 long long long long long long text",
+            value: 1,
+        },
+        {
+            source: "b2",
+            target: "c3 long long long long long long text",
+            value: 1,
+        },
+        {
+            source: "c3 long long long long long long text",
+            target: "d1",
+            value: 1,
+        },
+        {
+            source: "c1 long long text",
+            target: "d2",
+            value: 0.5,
+        },
+        {
+            source: "c4",
+            target: "d1",
+            value: 1,
+        },
+        {
+            source: "b4",
+            target: "c1 long long text",
+            value: 1,
+        },
+        {
+            source: "c2",
+            target: "d2",
+            value: 0.5,
+            startColor: "rgba(255, 0, 0, 0.5)",
+            endColor: "rgba(255, 0, 0, 0.5)",
+        },
+        {
+            source: "a1",
+            target: "b3",
+            value: 1,
+            startColor: "rgba(0, 0, 0, 0)",
+            endColor: "rgba(0, 0, 0,0)",
+        },
+    ],
+};
+export default data;
